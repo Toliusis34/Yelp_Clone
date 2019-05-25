@@ -1,4 +1,6 @@
 class CreatePhotos < ActiveRecord::Migration[5.2]
+  mount_uploader :avatar, AvatarUploader
+  
   def change
     create_table :photos do |t|
       t.text :caption
