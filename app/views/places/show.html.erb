@@ -40,6 +40,14 @@
 
 </br>
 
+<div class="clear float-right"></div>
+<%= simple_form_for @photo, url: place_photos_path(@place) do |x| %>
+  <%= x.input :caption %>
+  <%= x.submit "Add a Photo", class: 'btn btn-primary' %>
+<% end %>
+
+</br>
+
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -72,12 +80,6 @@
     Add a comment
   </button>
 </div>
-
-<div class="clear"></div>
-<%= simple_form_for @photo, url: place_photos_path(@place) do |x| %>
-  <%= x.input :caption %>
-  <%= x.submit "Add a Photo", class: 'btn btn-primary' %>
-<% end %>
 
 <div class="clear"></div>
 
