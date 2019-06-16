@@ -81,7 +81,7 @@
 
 <div class="col-10 offset-1">
   <% @place.photos.each do |photo| %>
-    <%= image_tag photo.picture %>
+    <%= image_tag photo.picture.url %>
     <blockquote>
       <%= photo.caption %>
     </blockquote>
